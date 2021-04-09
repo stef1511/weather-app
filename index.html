@@ -3,11 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/4d0f2f96cc.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+<link rel="stylesheet" href="src/style.css">
+
+
+  
 </head>
+
 <body>
-    <h1>
-        Hello
-    </h1>
+    <div class="container">
+        <br>
+     <form id ="search">
+      <div class="row">
+       <div class="col-6">
+    <input type="text" 
+    class="form-control"
+    placeholder= "Enter your city" 
+    id = "city-search"
+    autosave = "off"
+    autocomplete="off">
+     </div>
+  <div class="col-3">
+  <input type="submit" 
+  class= "btn btn-primary search-button"
+  value= "Search">
+  <div class="col-3">
+   <button id= "current-button"
+   class = "btn btn-success current-button">
+     Current
+   </button>
+  </div>
+   </div>
+ 
+ </div>
+</form>
+<br/>
+
+        <h1 id = "city">
+            Toronto
+        </h1>
+      
+        <p class="date" id = "current-date">
+            Thursday March 8, 2021
+        </p>
+  
+<div class="row text-center">
+    <div class="col-3">
+        <div class="card  current-temperature">
+            <div class="card-body ">
+
+             <span>
+           <i  class="fas fa-cloud-rain current-icon">
+          </i>
+            </span> 
+       
+        <h2>
+          <span id ="temp-display">
+            20
+            </span>
+            
+       <span class="degrees">
+           <a href="#" class="celsius-link" id = "celsius"> °C </a> | 
+           <a href="#" class ="fahrenheit-link" id ="fahrenheit"> °F </a>
+       
+           </span>
+         </h2>
+    <br/>
+
+        <h4>
+           <span id = "low">
+             10°
+           </span>  |
+           <span id ="high">
+               22°
+           </span>
+        </h4>
+        
+        </div>
+        </div>
+        </div>
+        
+<div class="col-4">
+    <div class="parameters">
+  <ul>
+      <li>
+          <h3>
+          humidity
+          </h3>
+          <p class="indication" id = "humidity">
+              80%
+          </p>
+      </li>
+      <li>
+          <h3>
+          wind
+          </h3>
+          <p class="indication"
+          id = "wind">
+           24 km/hr
+          </p>
+      </li>
+      <li>
+          <h3>
+          pressure
+          </h3>
+          <p class="indication"
+          id = "pressure">
+              800 mb
+          </p>
+      </li>
+  </ul>
+
+       </div>     
+       </div>
+
+<section class="forecast">
+          <div class="row">
+            
+            <div class="col-2">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  Friday 
+                  <br /> 
+                   <i class="fas fa-cloud-sun weather-icon"></i>
+                  <br />
+                  <span class="temperature">9° | 18°</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  Saturday
+                  <br />
+             <i class="fas fa-cloud weather-icon"></i>
+                  <br />
+                  <span class="temperature"> 11° | 13°</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card h-100">
+                <div class="card-body text-center">
+               Sunday<br />
+               <i class="fas fa-sun weather-icon"></i>
+                  <br />
+                  <span class="temperature">3° | 15°</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  Monday
+                  <br />
+                   <i class="fas fa-cloud weather-icon"></i>
+                  <br />
+                  <span class="temperature">10° | 22°</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                 Tuesday
+                 <br/>
+                 
+              <i class="far fa-snowflake weather-icon"></i>
+                  <br />
+                  <span class="temperature">3° | 7°</span>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+</section>
+
+
+</div>
+<script src="index.js"></script>
+
 </body>
 </html>
