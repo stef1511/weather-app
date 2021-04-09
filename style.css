@@ -107,6 +107,10 @@ section .card {
 } 
 
 .footer {
-    text-decoration: none;
+    
     font-family: monospace;
+}
+
+.sourceLink {
+    text-decoration: none;
 }
