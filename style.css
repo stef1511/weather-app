@@ -108,4 +108,5 @@ section .card {
 
 .footer {
     text-decoration: none;
+    font-family: monospace;
 }
